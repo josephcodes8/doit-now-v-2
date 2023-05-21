@@ -4,7 +4,7 @@ const Button = (props) => {
     iconComesFirst = null, // used to control where the icon is going to be rendered
     isFullyRounded = false, // controls weather the button is fully rounded or not
     isUppercase = false,
-    variant, // primary, primary_alt, secondary, secondary_alt
+    variant = "primary", // default, primary, primary_alt, secondary, secondary_alt
     additionalClass, //used to add custom styling to a specific instance
     children, // the icon
   } = props;
@@ -18,7 +18,7 @@ const Button = (props) => {
 
   return (
     <button
-      className={`text-sm md:text-md px-4 py-2 min-w-min whitespace-nowrap text-white focus:ring-2 transition-all duration-300 ${
+      className={`text-sm md:text-md px-4 py-1.5 md:py-2 whitespace-nowrap text-white focus:ring-2 transition-all duration-300 ${
         button_type[variant]
       } ${isFullyRounded ? "rounded-full" : "rounded-md"} ${additionalClass} ${
         isUppercase && "uppercase tracking-wide"

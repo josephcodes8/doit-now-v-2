@@ -1,5 +1,5 @@
 import { Footer } from "./components";
-import { Input, Button } from "./components/atoms";
+import { Button, Input, Select, TextArea } from "./components/atoms";
 
 function App() {
   const button = {
@@ -15,13 +15,32 @@ function App() {
     id: "1",
     placeholder: "Please Enter you BirthYear",
     type: "date",
+    isFullyRounded: false,
     additionalClass: "mr-2",
   };
 
   return (
     <section>
-      <div className="m-5 p-5 flex items-center">
-        <Input {...input} />
+      <div className="m-5 p-5 flex items-center flex-col gap-2">
+        <div className="w-full flex flex-col gap-1">
+          <label htmlFor={input.id} className="font-bold">
+            Title
+            <span className="text-xs text-slate-500 font-light">
+              {" "}
+              ( Optional )
+            </span>
+          </label>
+          <Input {...input} />
+        </div>
+        <TextArea {...input} />
+
+        <div className="w-full flex flex-col gap-1">
+          <label htmlFor="" className="font-bold">
+            Category
+          </label>
+          <Select />
+        </div>
+
         <Button {...button}>
           <i className="uil-arrow-right ml-2"></i>
         </Button>
