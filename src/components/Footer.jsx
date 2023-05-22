@@ -8,5 +8,5 @@ export default function Footer() {
         Woreta, Ethiopia - May 7, 2023
       </p>
     </footer>
-  );
+  )
 }

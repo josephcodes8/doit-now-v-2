@@ -1,19 +1,20 @@
 const Categories = [
   {
-    id: 1,
+    id: 0,
     label: "Education",
     icon: "uil-graduation-cap",
+    isSelected: true,
   },
   {
-    id: 2,
+    id: 1,
     label: "Exercise",
     icon: "uil-dumbbell",
   },
   {
-    id: 3,
+    id: 2,
     label: "Coding",
     icon: "uil-brackets-curly",
   },
-];
+]
 
-export default Categories;
+export default Categories

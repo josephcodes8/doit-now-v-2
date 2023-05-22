@@ -7,14 +7,16 @@ const Button = (props) => {
     variant = "primary", // default, primary, primary_alt, secondary, secondary_alt
     additionalClass, //used to add custom styling to a specific instance
     children, // the icon
-  } = props;
+  } = props
 
   let button_type = {
     primary: "bg-green-500 hover:bg-green-400 focus:ring-green-500/50",
-    primary_alt: "bg-green-200 hover:bg-green-200 focus:ring-green-200/50",
+    primary_alt:
+      "bg-green-200 hover:bg-green-200/85 focus:ring-green-200/50 text-slate-800",
     secondary: "bg-red-500 hover:bg-red-400 focus:ring-red-500/50",
-    secondary_alt: "bg-red-200 hover-bg-red-200 focus:ring-red-200/50",
-  };
+    secondary_alt:
+      "bg-red-200 hover-bg-red-200/85 focus:ring-red-200/50 text-slate-800",
+  }
 
   return (
     <button
@@ -28,10 +30,10 @@ const Button = (props) => {
       {label}
       {!iconComesFirst && children} {/* displays the icon after the label*/}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
 
 /*
 
