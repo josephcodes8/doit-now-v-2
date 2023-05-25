@@ -2,7 +2,7 @@ import { Input, Button, Select, TextArea } from "./atoms";
 
 const AlterTasks = () => {
   return (
-    <section className="m-5 flex flex-col">
+    <section className="m-10 flex flex-col">
       <Button
         {...{
           label: "add task",

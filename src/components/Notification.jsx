@@ -1,7 +1,7 @@
-import { successIcon } from "../assets"
+import { successIcon } from "../assets";
 const Notification = () => {
   return (
-    <div className="m-5 flex gap-x-5 bg-green-50 p-4 rounded-xl">
+    <div className="my-5 mx-10 flex gap-x-5 bg-green-50 p-4 rounded-xl">
       {/* icon */}
       <img src={successIcon} alt="" width={50} />
       <div>
@@ -12,7 +12,7 @@ const Notification = () => {
       </div>
       <span className="uil-times ml-auto"></span>
     </div>
-  )
-}
+  );
+};
 
-export default Notification
+export default Notification;
