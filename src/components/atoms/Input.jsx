@@ -1,7 +1,7 @@
 const Input = (props) => {
   const {
     id,
-    type,
+    type = "text", // default = textfield
     placeholder,
     isFullyRounded = false,
     additionalClass = "",

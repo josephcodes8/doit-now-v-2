@@ -1,9 +1,9 @@
-import { Categories } from "../data"
-import { Button } from "../components/atoms"
+import { Categories } from "../data";
+import { Button } from "../components/atoms";
 
 const Task = (props) => {
-  const { id, urgency, title, description, location, time } = props
-  const { label, icon } = Categories[id]
+  const { id, urgency, title, description, location, time } = props;
+  const { label, icon } = Categories[id];
 
   return (
     <div className="bg-slate-900 mt-4 text-white rounded-md flex items-start gap-x-5 p-5">
@@ -30,7 +30,7 @@ const Task = (props) => {
         </button>
         <div className="flex mt-3">
           <div className="ml-auto">
-            <Button {...{ label: "Mark as Done", variant: "primary_alt" }}>
+            <Button {...{ label: "Done", variant: "primary_alt" }}>
               <span className="uil-check ml-2"></span>
             </Button>
             <Button
@@ -46,7 +46,7 @@ const Task = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Task
+export default Task;

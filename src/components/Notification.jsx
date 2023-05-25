@@ -6,7 +6,7 @@ const Notification = () => {
       <img src={successIcon} alt="" width={50} />
       <div>
         <h1 className="text-xl font-bold mb-2 text-green-900">Successfull</h1>
-        <p className="text-xls md:text-base text-gray-500">
+        <p className="text-sm md:text-base text-gray-500">
           You successfully added a task
         </p>
       </div>

@@ -1,9 +1,8 @@
-import { useState } from "react"
-import { Categories } from "../../data"
+import { Categories } from "../../data";
 
 const Select = () => {
   return (
-    <div className="relative mt-1 flex flex-col items-start">
+    <div className="relative mt-2 flex flex-col items-start">
       <button className="text-sm rounded-full text-slate-600 bg-slate-100/50 focus:ring-1 hover:bg-slate-200 transition-colors focus:ring-green-500 px-4 py-1 md:py-1.5 lg:py-2">
         <span className={`mr-2 ${Categories[2].icon}`}></span>
         {Categories[2].label}
@@ -29,7 +28,7 @@ const Select = () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Select
+export default Select;
