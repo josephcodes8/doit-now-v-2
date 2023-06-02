@@ -1,6 +1,8 @@
-import React from "react"
-
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleSearchField } from "../features/search/search.slice";
 const TopNavigation = () => {
+  const dispatch = useDispatch();
   return (
     <header className="px-5 pt-5 md:px-10 md:pt-10">
       <nav className="flex items-center justify-between">
@@ -9,13 +11,12 @@ const TopNavigation = () => {
           doit.<small className="text-sm">now</small>
         </a>
         {/* TOGGLE SEARCH ICON */}
-        {/* TODO: ADD 'ONCLICK' FUNCTIONALITY TO TOGGLE THE SEARCH FIELD */}
-        <button>
+        <button onClick={() => dispatch(toggleSearchField())}>
           <span className="uil-search text-xl"></span>
         </button>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default TopNavigation
+export default TopNavigation;

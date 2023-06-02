@@ -5,19 +5,22 @@ import {
   SearchBar,
   TaskList,
   AlterTasks,
-} from "./components"
+} from "./components";
+
+import { useSelector } from "react-redux";
 
 function App() {
+  const { isFieldVisible } = useSelector((state) => state.searchField);
   return (
     <section>
       <TopNavigation />
       <Notification />
-      {/* <SearchBar /> */}
+      {isFieldVisible && <SearchBar />}
       <AlterTasks />
       <TaskList />
       <Footer />
     </section>
-  )
+  );
 }
 
-export default App
+export default App;

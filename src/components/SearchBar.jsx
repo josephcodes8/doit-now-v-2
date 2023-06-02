@@ -1,4 +1,7 @@
+import { toggleSearchField } from "../features/search/search.slice";
+import { useDispatch } from "react-redux";
 const SearchBar = () => {
+  const dispatch = useDispatch();
   return (
     <section className="backdrop-blur-lg fixed w-full h-full p-5 z-50 top-0">
       <div className="bg-white mt-16 rounded-md md:max-w-[1080px] md:mx-auto shadow-md">
@@ -9,7 +12,10 @@ const SearchBar = () => {
             className="outline-none p-4 text-slate-700 w-full"
             placeholder="Search Task"
           />
-          <button className="text-xs hover:shadow-sm uppercase border-[1px] py-[4px] px-2 rounded-md">
+          <button
+            onClick={() => dispatch(toggleSearchField())}
+            className="text-xs hover:shadow-sm uppercase border-[1px] py-[4px] px-2 rounded-md"
+          >
             Esc
           </button>
         </div>
@@ -18,7 +24,7 @@ const SearchBar = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
